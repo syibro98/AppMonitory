@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="size_title">22sp</dimen>
+    <dimen name="size_subtitle">20sp</dimen>
+    <dimen name="size_base">16sp</dimen>
+    <dimen name="size_sm">14sp</dimen>
+
+    <dimen name="margin_sm">12dp</dimen>
+    <dimen name="margin_lg">16dp</dimen>
+    <dimen name="margin_xl">20dp</dimen>
+    <dimen name="margin_container">24dp</dimen>
+    <dimen name="margin_xxl">62dp</dimen>
+</resources>

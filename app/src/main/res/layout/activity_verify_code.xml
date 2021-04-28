@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white3"
+    tools:context=".VerifyCodeActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/verifyCode"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:paddingHorizontal="@dimen/margin_container"
+        app:layout_constraintBottom_toTopOf="@+id/actionArea"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+        <TextView
+            android:id="@+id/verifyCodeTitle"
+            style="@style/Theme.Monitory.Title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="?attr/actionBarSize"
+            android:text="@string/vc_kk"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/verifyCodeSubtitle"
+            style="@style/Theme.Monitory.TextBase"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/vc_subtitle"
+            android:layout_marginTop="@dimen/margin_sm"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/verifyCodeTitle" />
+
+        <EditText
+            android:id="@+id/fieldKodeKeluarga"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/margin_lg"
+            android:background="@drawable/field_text"
+            android:textColor="@color/black3"
+            android:textStyle="bold"
+            android:textAllCaps="true"
+            android:inputType="textCapCharacters"
+            android:hint="@string/vc_kk"
+            android:maxLength="8"
+            android:gravity="center"
+            android:layout_marginTop="@dimen/margin_lg"
+            app:layout_constraintTop_toBottomOf="@id/verifyCodeSubtitle"/>
+
+        <TextView
+            android:id="@+id/verifyCodePhar1"
+            style="@style/Theme.Monitory.TextBase"
+            android:textSize="@dimen/size_sm"
+            android:gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/vc_aggreement_text"
+            android:layout_marginTop="@dimen/margin_container"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/fieldKodeKeluarga" />
+
+        <android.widget.Button
+            android:id="@+id/btnMasuk"
+            android:onClick="actIn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_sm"
+            style="@style/Theme.Monitory.Button"
+            android:background="@drawable/btn_primary"
+            android:text="@string/vc_in"
+            app:layout_constraintTop_toBottomOf="@id/verifyCodePhar1"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <LinearLayout
+        android:id="@+id/actionArea"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@color/white"
+        android:elevation="20dp"
+        android:paddingVertical="20dp"
+        android:paddingHorizontal="24dp"
+        app:layout_constraintBottom_toBottomOf="parent">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/margin_lg"
+            style="@style/Theme.Monitory.TextBase"
+            android:textColor="@color/gunmetal"
+            android:gravity="center_horizontal"
+            android:text="@string/vc_no_kk"/>
+        <android.widget.Button
+            android:id="@+id/btnStart"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:background="@drawable/btn_secondary"
+            android:theme="@style/Theme.AppCompat.Light"
+            style="@style/Theme.Monitory.Button"
+            android:text="@string/vc_buy_kk"/>
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
